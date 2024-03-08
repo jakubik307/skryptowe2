@@ -21,3 +21,10 @@ def get_request_from_line(line):
         return line.split(" ")[5].replace('"', "").strip()
     except IndexError:
         return ""
+
+
+def get_path_from_line(line):
+    try:
+        return line.split(" ")[6].strip()
+    except IndexError:
+        return ""
