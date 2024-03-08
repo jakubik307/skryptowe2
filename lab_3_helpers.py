@@ -1,3 +1,6 @@
+import sys
+
+
 def check_status_in_line(line, code):
     try:
         return int(line.split(" ")[8].strip()) == code
@@ -28,3 +31,11 @@ def get_path_from_line(line):
         return line.split(" ")[6].strip()
     except IndexError:
         return ""
+
+
+def count_codes(code):
+    acc = 0
+    for line in sys.stdin:
+        if check_status_in_line(line, code):
+            acc += 1
+    return acc
