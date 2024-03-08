@@ -5,4 +5,5 @@ print("Hello World")
 
 line = sys.stdin.readline()
 
-print(line.split(" ")[8])
+for value in line.split(" "):
+    print(value)
