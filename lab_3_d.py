@@ -14,7 +14,12 @@ def print_image_download_ratio():
             if is_image(lab_3_helpers.get_path_from_line(line)):
                 image_data += bytes_in_line
 
-    print(f"Image download ratio: {image_data / total_data}")
+    try:
+        ratio = image_data / total_data
+    except ZeroDivisionError:
+        ratio = 0
+
+    print(f"Image download ratio: {ratio}")
 
 
 def is_image(path):
