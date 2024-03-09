@@ -1,4 +1,5 @@
 import sys
+import datetime
 
 
 def check_status_in_line(line, code):
@@ -39,3 +40,17 @@ def count_codes(code):
         if check_status_in_line(line, code):
             acc += 1
     return acc
+
+
+def check_week_day(line, day):
+    try:
+        return get_week_day(line.split(" ")[3].strip()) == day
+    except ValueError:
+        return False
+    except IndexError:
+        return False
+
+
+def get_week_day(line):
+    date = datetime.datetime.strptime(line[1:], "%d/%b/%Y:%H:%M:%S")
+    return int(date.weekday())
