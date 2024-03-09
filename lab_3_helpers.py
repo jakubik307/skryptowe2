@@ -87,3 +87,11 @@ def check_given_hour(line, start_hour, end_hour):
                 return True
         return False
 
+
+def check_country(line, country):
+    try:
+        return line.split(" ")[0].strip().split(".")[-1] == country
+    except ValueError:
+        return False
+    except IndexError:
+        return False
