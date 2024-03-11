@@ -8,4 +8,5 @@ def print_requests_sent_from_poland():
             print(line)
 
 
-print_requests_sent_from_poland()
+if __name__ == "__main__":
+    print_requests_sent_from_poland()

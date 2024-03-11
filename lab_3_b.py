@@ -15,4 +15,5 @@ def print_total_sent_bytes():
     print(f"Total data sent: {gigabytes} GB")
 
 
-print_total_sent_bytes()
+if __name__ == "__main__":
+    print_total_sent_bytes()

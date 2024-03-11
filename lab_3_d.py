@@ -30,5 +30,5 @@ def is_image(path):
             return True
     return False
 
-
-print_image_download_ratio()
+if __name__ == "__main__":
+    print_image_download_ratio()

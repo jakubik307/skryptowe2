@@ -9,4 +9,5 @@ def print_filter_status_200():
             print(line)
 
 
-print_filter_status_200()
+if __name__ == '__main__':
+    print_filter_status_200()

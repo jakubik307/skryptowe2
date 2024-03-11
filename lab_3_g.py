@@ -8,4 +8,5 @@ def print_filter_sent_on_friday():
             print(line)
 
 
-print_filter_sent_on_friday()
+if __name__ == '__main__':
+    print_filter_sent_on_friday()

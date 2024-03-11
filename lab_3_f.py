@@ -8,4 +8,5 @@ def print_filter_sent_between_22_and_6():
             print(line)
 
 
-print_filter_sent_between_22_and_6()
+if __name__ == '__main__':
+    print_filter_sent_between_22_and_6()
