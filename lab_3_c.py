@@ -14,5 +14,6 @@ def print_biggest_file_path():
 
     print(f"Path of the largest resource: {path}")
 
+
 if __name__ == "__main__":
     print_biggest_file_path()
