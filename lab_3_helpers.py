@@ -5,18 +5,14 @@ import datetime
 def check_status_in_line(line, code):
     try:
         return int(line.split(" ")[8].strip()) == code
-    except ValueError:
-        return False
-    except IndexError:
+    except (ValueError, IndexError):
         return False
 
 
 def get_bytes_from_line(line):
     try:
         return int(line.split(" ")[9].strip())
-    except ValueError:
-        return 0
-    except IndexError:
+    except (ValueError, IndexError):
         return 0
 
 
@@ -45,9 +41,7 @@ def count_codes(code):
 def check_week_day(line, day):
     try:
         return get_week_day(line.split(" ")[3].strip()) == day
-    except ValueError:
-        return False
-    except IndexError:
+    except (ValueError, IndexError):
         return False
 
 
@@ -59,9 +53,7 @@ def get_week_day(line):
 def check_hours_range(line, start_hour, end_hour):
     try:
         return check_given_hour(line.split(" ")[3].strip(), start_hour, end_hour)
-    except ValueError:
-        return False
-    except IndexError:
+    except (ValueError, IndexError):
         return False
 
 
@@ -91,7 +83,5 @@ def check_given_hour(line, start_hour, end_hour):
 def check_country(line, country):
     try:
         return line.split(" ")[0].strip().split(".")[-1] == country
-    except ValueError:
-        return False
-    except IndexError:
+    except (ValueError, IndexError):
         return False
